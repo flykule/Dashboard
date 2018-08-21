@@ -5,28 +5,117 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootstrap.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+          integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="css/base.css">
 
     <title>Dashboard</title>
 </head>
 <body>
-<nav class="navbar fixed-top">
+<nav class="navbar navbar-expand-lg fixed-top">
     <div class="container-fluid">
-        <div class="row">
-            <div class="col-sm-3 top-left-menu">
-                <a href="#" class="navbar-brand">
-                    <h1>dashboard</h1>
-                </a>
+        <!--<div class="row">-->
+        <div class="col-md-3 top-left-menu">
+            <a href="#" class="navbar-brand">
+                <h1>dashboard</h1>
+            </a>
+            <button type="button" class="navbar-toggler collapsed"
+                    data-toggle="collapse" data-target="#nav-menu" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a href="#" data-toggle="tooltip" data-placement="bottom"
+               data-delay="500" title="Refresh data" class="header-refresh float-right ml-auto">
+                <i class="fas fa-redo" aria-hidden="true"></i>
+            </a>
+        </div>
+        <form role="search" id="search" class="d-none d-md-block col-md-3 mr-auto">
+            <div class="input-group">
+                <div class="input-group-prepend align-content-center">
+                    <i class="fa fa-search input-group-text" aria-hidden="true"></i>
+                </div>
+                <input type="text" class="form-control transition" placeholder="Search...">
+            </div>
+        </form>
+        <div id="nav-menu" class="collapse navbar-collapse float-right">
+            <div id="btn-notification" class="btn-group ml-auto">
+                <button type="button"
+                        id="notification-dropdown"
+                        class="btn btn-link dropdown-toggle align-content-center"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Notifications
+                    <span class="badge badge-pill badge-danger"
+                          style="width: 1.0rem;height: 1.0rem;font-size: 14px;">3</span>
+                </button>
+                <div id="notification-list" class="dropdown-menu float-right dropdown-menu-right">
+                    <a href="#" class="dropdown-item">
+                        <div class="dropdown-content">
+                            <span class="badge badge-pill"></span>
+                            <img src="imgs/laika.jpg" alt="" class="rounded-circle">
+                            <div class="notification-message">
+                                <strong>Laika</strong>
+                                <p>Hey! How are you?</p>
+                                <em class="since">6h ago</em>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="dropdown-item">
+                        <div class="dropdown-content">
+                            <span class="badge badge-pill"></span>
+                            <img src="imgs/cat.jpg" alt="" class="rounded-circle">
+                            <div class="notification-message">
+                                <strong>Devil cat</strong>
+                                <p>I will never forgive you...</p>
+                                <em class="since">6h ago</em>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="dropdown-item">
+                        <div class="dropdown-content">
+                            <span class="badge badge-pill rounded-circle"></span>
+                            <img src="imgs/doge.jpg" alt="" class="rounded-circle">
+                            <div class="notification-message">
+                                <strong>Doge</strong>
+                                <p>What are you doing? So scare. It's alright now.</p>
+                                <em class="since">yesterday</em>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div id="nav-profile" class="btn-group">
+                    <button id="headDropDown"
+                            class="btn btn-light dropdown-toggle img-thumbnail" type="button"
+                            data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+                        <img src="imgs/jon.png" class="rounded-circle">
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right">
+                        <a href="#" class="dropdown-item">Profile</a>
+                        <a href="settings.html" class="dropdown-item">Setting</a>
+                        <div class="dropdown-divider"></div>
+                        <a href="#" class="dropdown-item">Logout</a>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-</nav>
 
+    </div>
+    <!--</div>-->
+</nav>
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="js/bootstrap.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+<script src="js/bootstrap.js"></script>
 </body>
 </html>
