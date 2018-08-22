@@ -336,7 +336,7 @@ nav .top-left-menu {
     margin: auto;
     top: 1rem;
     bottom: 0;
-    left:-1.6rem;
+    left:-2.6rem;
     right: 0;
 }
 
@@ -348,4 +348,25 @@ nav .top-left-menu {
 nav .header-refresh {
     margin-left: auto;
     color: #ffffff;
+}
+
+#quick-info .card-block{
+    display: flex;
+    flex-direction: column;
+}
+
+#quick-info .quick-stats {
+    font-size: 1.0rem;
+    line-height: 1.3rem;
+    border-bottom: 0.1rem solid #e5e9ec;
+}
+
+#quick-info .quick-stats strong{
+    font-weight: 300;
+}
+
+#quick-info .quick-stats span {
+    font-weight: 300;
+    float:right;
+    color: #8b91a0;
 }
