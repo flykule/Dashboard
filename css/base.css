@@ -65,9 +65,53 @@ nav #nav-menu{
     font-size: 0.7em;
     padding: 0.22rem 0.55rem 0.2rem 0.3rem;
     position:absolute;
-    right:0.2rem;
-    top:0.2rem;
+    right:0.10rem;
+    top:0.33rem;
     z-index: 99;
+}
+
+@media (min-width: 768px) {
+    .bd-sidebar {
+        /*border-right: 1px solid rgba(0, 0, 0, .1);*/
+        position: -webkit-sticky;
+        position: sticky;
+        /*top: 5rem;*/
+        top: 0;
+        z-index: 1000;
+        height: calc(100vh - 4rem);
+    }
+}
+
+#side-menu {
+    background-color: #1b1e24;
+    padding-top: 5rem;
+    height: 100%;
+    position: fixed;
+}
+
+#side-menu .profile-block > *{
+    display: inline-block;
+}
+
+#side-menu .profile-block img {
+    width: 70px;
+}
+
+#side-menu .profile-title {
+    color: #ffffff;
+    margin-left: 1rem;
+    font-size: 1.5em;
+    vertical-align: middle;
+}
+
+#side-menu .profile-title small{
+    display: block;
+}
+
+.bd-sidebar {
+    -ms-flex-order: 0;
+    order: 0;
+    /*border-bottom: 1px solid rgba(0, 0, 0, .1);*/
 }
 
 #nav-profile {
