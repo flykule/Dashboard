@@ -361,6 +361,14 @@ nav .header-refresh {
     border-bottom: 0.1rem solid #e5e9ec;
 }
 
+.loading {
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    background: #e5e9ec url('../imgs/loading.svg') no-repeat fixed center;
+}
+
 #quick-info .quick-stats strong{
     font-weight: 300;
 }
@@ -369,4 +377,18 @@ nav .header-refresh {
     font-weight: 300;
     float:right;
     color: #8b91a0;
+}
+
+#ration-stock .stacked-area{
+    height: 200px;
+}
+
+#ration-stock .switch {
+    font-weight: 300;
+    color: #8b91a0;
+    padding: 0.5rem 0;
+}
+
+#ration-stock .switchery{
+    float: right;
 }

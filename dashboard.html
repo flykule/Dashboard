@@ -11,11 +11,13 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
           integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
           crossorigin="anonymous">
+    <link rel="stylesheet" href="css/switchery.css">
     <link rel="stylesheet" href="css/base.css">
 
     <title>Dashboard</title>
 </head>
 <body>
+<div class="loading"></div>
 <nav class="navbar navbar-expand-lg fixed-top">
     <div class="container-fluid">
         <!--<div class="row">-->
@@ -235,6 +237,28 @@
                     </div>
                 </div>
             </div>
+            <div class="card" id="performance-eval">
+                <div class="card-block">
+                    <h2>Performance evaluation</h2>
+                    <div class="spider-chart"></div>
+                </div>
+            </div>
+            <div class="card" id="ration-stock">
+                <div class="card-block">
+                    <h2>Ration stock info</h2>
+                    <div class="stacked-area"></div>
+                    <div class="switch">
+                        View main stocks
+                        <input type="checkbox" class="switchery" checked/>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="switch">
+                        Hide empty stocks
+                        <input type="checkbox" class="switchery" />
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
@@ -247,6 +271,9 @@
         integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
         crossorigin="anonymous"></script>
 <script src="js/jquery.easypiechart.min.js"></script>
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/highcharts-more.js"></script>
+<script src="js/switchery.js"></script>
 <script src="js/main.js"></script>
 <script src="js/bootstrap.js"></script>
 </body>
