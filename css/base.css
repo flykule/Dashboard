@@ -404,7 +404,11 @@ nav .header-refresh {
     background-color: #1bc98e;
 }
 
-#real-time .badgespan,
+#daily-usage .area-chart{
+    height: 400px;
+}
+
+#real-time .badge.span,
 #real-time .col-form-label{
     margin-top: 0.25rem;
 }
