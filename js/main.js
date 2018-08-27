@@ -1,40 +1,54 @@
 $(document).ready(function () {
     $('.loading').remove();
     $('.round-chart').easyPieChart({
-        'scaleColor':false,
-        'lineWidth':20,
-        'lineCap':'butt',
-        'barColor':'#6d5cae',
-        'trackColor':'#e5e9ec',
-        'size':170,
+        'scaleColor': false,
+        'lineWidth': 20,
+        'lineCap': 'butt',
+        'barColor': '#6d5cae',
+        'trackColor': '#e5e9ec',
+        'size': 170,
     });
+
+    let changeMultiplier = 0.2;
+    window.setInterval(function () {
+        let freeSpacePercentage;
+        let freeSpace = $('#free-space');
+        freeSpacePercentage = freeSpace.text();
+        freeSpacePercentage = parseFloat(freeSpacePercentage);
+
+        let delta = changeMultiplier * (Math.random() < 0.5 ? -1.0 : 1.0);
+        freeSpacePercentage = freeSpacePercentage + freeSpacePercentage * delta;
+        freeSpacePercentage = parseInt(freeSpacePercentage);
+        freeSpace.text(freeSpacePercentage + '%');
+    }, 2000);
+
     $('#performance-eval .spider-chart').highcharts({
-        chart:{
-            polar:true,
-            type:'area'
+        chart: {
+            polar: true,
+            type: 'area'
         },
-        title:{
-            text:''
+        title: {
+            text: ''
         },
-        xAxis:{
-            categories:['Taming','Acessory','Development','Grooming','Awareness','Ration'],
+        xAxis: {
+            categories: ['Taming', 'Acessory', 'Development', 'Grooming', 'Awareness', 'Ration'],
             tickmarkPlacement: 'on',
             lineWidth: 0
         },
-        yAxis:{
+        yAxis: {
             gridLineInterpolation: 'polygon',
-            lineWidth:0,
-            min:0
+            lineWidth: 0,
+            min: 0
         },
-        tooltip:{
-            shared:true,
-            pointFormat:'<span style="color:{series.color}">{series.name}: <b>${point.y:,.0f}</b><br/>'
+        tooltip: {
+            shared: true,
+            pointFormat: '<span style="color:{series.color}">{series.name}: <b>${point.y:,.0f}</b><br/>'
         },
-        legend:{
-            align:'right',
-            verticalAlign:'top',
-            y:70,
-            layout:'vertical'
+        legend: {
+            align: 'right',
+            verticalAlign: 'top',
+            y: 70,
+            layout: 'vertical'
         },
         series: [{
             name: 'Allocated resources',
@@ -50,13 +64,13 @@ $(document).ready(function () {
             }
         ]
     });
-    let elems,switcheryOpts;
+    let elems, switcheryOpts;
     elems = Array.prototype.slice.call(document.querySelectorAll('.switchery'));
     switcheryOpts = {
-        color:'#1bc98e'
+        color: '#1bc98e'
     };
     elems.forEach(function (e) {
-        let switchery = new Switchery(e,switcheryOpts)
+        let switchery = new Switchery(e, switcheryOpts)
     });
     // ration stock stacked area
     $('#ration-stock .stacked-area').highcharts({
